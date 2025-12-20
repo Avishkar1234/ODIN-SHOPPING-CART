@@ -15,7 +15,7 @@ export default function Home() {
     },
     {
       id: 3,
-      img: "https://images.unsplash.com/photo-1585386959984-a4155228f5e1?q=80&w=1200&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       name: "Keyboard",
       price: 60,
     },
@@ -51,13 +51,13 @@ export default function Home() {
     },
     {
       id: 9,
-      img: "https://images.unsplash.com/photo-1555617117-08fda9c31a5f?q=80&w=1200&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1608538770329-65941f62f9f8?q=80&w=710&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       name: "Speaker",
       price: 70,
     },
     {
       id: 10,
-      img: "https://images.unsplash.com/photo-1512499617640-c2f999fe5d62?q=80&w=1200&auto=format&fit=crop",
+      img: "https://images.unsplash.com/photo-1548611716-f156c633d514?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       name: "Backpack",
       price: 55,
     },
@@ -65,12 +65,16 @@ export default function Home() {
 
     return (
         <>
-            <h1>For you</h1>
+            <h1>Welcome to <strong>Zippfy</strong> where you can find all Home appliances and all the latest gadgets that you need.</h1>
+            <h3>For you</h3>
+
+            <p></p>
             
             {products.map((item) => (
                 <div key={item.id} className={item.name}>
                     <img src={item.img} alt={item.name} />
                     <p>This is item no.{item.id}</p>
+                    <p>{item.name}</p>
                     <p>Price: ${item.price}</p>
                 </div>
             ))}

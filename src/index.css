@@ -1,0 +1,15 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-style: italic;
+  background-color: black;
+  color: brown;
+}
+
+img {
+  height: 300px;
+  width: 420px;
+}
