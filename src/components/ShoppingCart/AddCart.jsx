@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import styles from "./AddCart.module.css"
 
-export default function addToCart() {
+export default function AddToCart() {
     const [count, setCount] = useState(0)
 
     const increaseCount = () => setCount(prevCount => prevCount + 1)

@@ -1,4 +1,10 @@
-Link{
-    display: flex;
-    justify-content: space-around;
+.navBar {
+   display: flex; 
+   justify-content: space-around;
+   font-size: 20px;
+}
+
+a{
+    list-style-type: none;
+    text-decoration: none;
 }

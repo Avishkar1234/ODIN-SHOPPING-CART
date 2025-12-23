@@ -1,0 +1,18 @@
+.cartText{
+    color: whitesmoke;
+}
+
+.cartContainer{
+    height: 380px;
+    width: 400px;
+    margin: 30px;
+    padding: 20px;
+    background-color: rgba(227, 198, 198, 0.663);
+    border-radius: 14px;
+    
+}
+
+.cartContainer>img {
+    height: 200px;
+    width: 250px;
+}
