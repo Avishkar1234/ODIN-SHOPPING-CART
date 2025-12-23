@@ -11,9 +11,12 @@ export default function AddToCart() {
 
     if (count === 0) {
         return (
-            <button className={styles.initialBtn} onClick={increaseCount}>
-                +Cart
-            </button>
+            <div className={styles.cartButton}>
+
+                <button className={styles.initialBtn} onClick={increaseCount}>
+                    +Cart
+                </button>
+            </div>
         )
     }
 
