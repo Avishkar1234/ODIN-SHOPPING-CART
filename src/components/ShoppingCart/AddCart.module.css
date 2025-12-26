@@ -1,46 +1,92 @@
-.cartButton{
+.cartButton {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 12px;
 }
 
 .initialBtn {
-    border-radius: 4px;
-    width: 30px;
-    height: 20px;
+    border-radius: 8px;
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
 .initialBtn:hover {
-    background-color: rgb(244, 251, 33);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.6);
+}
+
+.initialBtn:active {
+    transform: translateY(0);
 }
 
 .cardContainer {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 0;
+    margin-top: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-button{
-    height: 20px;
-    width: 20px;
-    border-radius: 1px;
-    font-size: 8px;
-    border-radius: 0px;
-    border: 0px solid black;
+.cardContainer button {
+    height: 40px;
+    width: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#increaseButton{
-    border-radius: 0px 4px 4px 0px;
+#countButton {
+    background: #f7fafc;
+    color: #2c3e50;
+    border-left: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+    cursor: default;
+    width: 60px;
+    font-size: 18px;
+}
+
+#increaseButton {
+    border-radius: 0 8px 8px 0;
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    color: white;
+    font-size: 20px;
 }
 
 #decreaseButton {
-    border-radius: 4px 0px 0px 4px;
+    border-radius: 8px 0 0 8px;
+    background: linear-gradient(135deg, #fc8181 0%, #f56565 100%);
+    color: white;
+    font-size: 14px;
 }
 
-#decreaseButton:hover{
-    background-color: rgb(251, 68, 18);
+#decreaseButton:hover {
+    background: linear-gradient(135deg, #f56565 0%, #e53e3e 100%);
+    transform: scale(1.05);
 }
 
 #increaseButton:hover {
-    background-color: rgb(27, 224, 27);
+    background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+    transform: scale(1.05);
+}
+
+#decreaseButton:active,
+#increaseButton:active {
+    transform: scale(0.95);
 }

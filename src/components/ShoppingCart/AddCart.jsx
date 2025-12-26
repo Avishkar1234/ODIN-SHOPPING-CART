@@ -1,18 +1,21 @@
-import { useState } from "react";
 import { FaRegTrashAlt } from "react-icons/fa";
 import styles from "./AddCart.module.css"
 
-export default function AddToCart() {
-    const [count, setCount] = useState(0)
+export default function AddToCart({ product, onAdd, onRemove, quantity = 0 }) {
+    
+    const increaseCount = () => {
+        onAdd(product)
+    }
 
-    const increaseCount = () => setCount(prevCount => prevCount + 1)
+    const decreaseCount = () => {
+        if (quantity > 0) {
+            onRemove(product.id)
+        }
+    }
 
-    const decreaseCount = () => setCount(prevCount => prevCount - 1)
-
-    if (count === 0) {
+    if (quantity === 0) {
         return (
             <div className={styles.cartButton}>
-
                 <button className={styles.initialBtn} onClick={increaseCount}>
                     +Cart
                 </button>
@@ -25,9 +28,8 @@ export default function AddToCart() {
             <button type="button" id={styles.decreaseButton} onClick={decreaseCount}>
                 <FaRegTrashAlt />
             </button>
-            <button type="button" id={styles.countButton}>{count}</button>
+            <button type="button" id={styles.countButton}>{quantity}</button>
             <button type="button" id={styles.increaseButton} onClick={increaseCount}>+</button>
-
         </div>
     )
 }
